@@ -13,13 +13,13 @@ import org.openqa.selenium.support.PageFactory;
 public class Dashboard {
 	WebDriver driver;
 	
-	@FindBy(xpath="//*[@id='user_info_links']/ul/li[2]/a")
+	/*@FindBy(xpath="//*[@id='user_info_links']/ul/li[2]/a")
 	WebElement user_logout;
 	
 	@FindBy(how=How.ID, using="user_info_arrow")
 	@CacheLookup
 	WebElement user_arrow;
-	
+	*/
 	
 	public Dashboard(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -29,15 +29,15 @@ public class Dashboard {
 	}
 	
 	public Login logout(){
-		//driver.findElement(By.id("user_info_arrow")).click();
+		driver.findElement(By.id("user_info_arrow")).click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		//driver.findElement(By.xpath("//*[@id='user_info_links']/ul/li[2]/a")).click();
+		driver.findElement(By.xpath("//*[@id='user_info_links']/ul/li[2]/a")).click();
 		
-		user_arrow.click();
-		user_logout.click();
-		//return new Login(driver);
+		//user_arrow.click();
+		//user_logout.click();
+		return new Login(driver);
 		
-		return PageFactory.initElements(driver, Login.class);
+		//return PageFactory.initElements(driver, Login.class);
 	}
 	
 	

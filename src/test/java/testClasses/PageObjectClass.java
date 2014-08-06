@@ -40,11 +40,6 @@ public class PageObjectClass extends SeleneseTestBase {
 	  
 	  log.info("URL is fetched in the browser"+name);
 	  
-	  try{
-		  
-	  }catch(org.openqa.selenium.NoSuchElementException e){
-		  log.error("", e);
-	  }
 	  
 	 loginUser = PageFactory.initElements(driver, Login.class);
 	  
