@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test Case 01">
+    <classes>
+      <class name="Persistent.GUI_automation.testngClass"/>
+    </classes>
+  </test> <!-- Test Case-->
+  
+  <test name ="Test Case 01 - Verifying Publish Post Function">
+  <classes>
+  	<class name="Persistent.GUI_automation.SecondTestngClass"/>
+  	  <class name="Persistent.GUI_automation.testngClass"/>
+  	<groups>
+  		<include name ="smoke test"/>
+  	</groups>
+  	
+  </classes>  
+  </test>
+  
+  <test name ="test case 03">
+  <packages>
+  	<package name="Persistent.GUI_automation"/>
+  	<methods>
+  		<include name ="firstmethod"/>
+  		<exclude name ="secondmethod"/>
+  	</methods>
+  </packages>
+  
+  </test>
+  
+  
+</suite> <!-- Suite -->
